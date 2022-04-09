@@ -34,7 +34,7 @@ header {
 nav {
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   padding: 1em 5em;
   display: flex;
   justify-content: space-between;
@@ -103,7 +103,7 @@ article {
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
-  z-index: 8;
+  z-index: 13;
 }
 .hero-info h2 {
   font-size: clamp(2rem, 9vw, 5rem);
@@ -111,22 +111,22 @@ article {
   text-transform: uppercase;
 }
 .hero-info h1 {
-  color: var(--white);
+  color: red;
   font-size: clamp(3.2rem, 10vw, 7rem);
   line-height: clamp(3.2rem, 10vw, 7rem);
   text-transform: uppercase;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 .hero-info h3 {
-  color: var(--white);
+  color: red;
   font-size: 1.6rem;
   font-weight: normal;
   margin-top: 2em;
 }
-@supports (-webkit-text-stroke: 3px var(--pill)) {
+@supports (-webkit-text-stroke: 3px red) {
   .hero-info h2 {
     color: transparent;
-    -webkit-text-stroke: 3px var(--pill);
+    -webkit-text-stroke: 3px red;
     text-shadow: none;
   }
 }
@@ -186,9 +186,6 @@ article {
 .hi-10 {
   background-image: url("trang_chu/Untitled-10.jpg");
 }
-.hi-11 {
-  background-image: url("trang_chu/Untitled-11.jpg");
-}
 
 /*  SECTION: Overlay Menu Section
 ----------------------------------------------- */
@@ -196,7 +193,9 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9;
+  right: 0;
+  bottom: 0;
+  z-index: 14;
   min-height: 100vh;
   padding: 8em 5em 2em 5em;
   background-color: var(--white);
@@ -331,7 +330,7 @@ section {
 html,
 body {
   display: grid;
-  height: 100%;
+  
   width: 100%;
   font-family: "Poppins", sans-serif;
   place-items: center;

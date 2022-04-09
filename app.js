@@ -2,7 +2,7 @@ let burger = document.getElementById("burger");
 let overlay = document.querySelector("section");
 let heroImage = document.querySelector(".hero-image");
 let showMenu = false;
-let del = 3;
+let del = 1;
 let i = 1;
 
 let tl = gsap.timeline({
@@ -38,16 +38,16 @@ gsap.set(["#hero-1 h2, #hero-1 h1, #hero-1 h3"], {
 
 gsap.set(
   [
-    `#hero-2 h2, #hero-3 h2, #hero-4 h2, #hero-5 h2,
-     #hero-2 h1, #hero-3 h1, #hero-4 h1, #hero-5 h1,
-     #hero-2 h3, #hero-3 h3, #hero-4 h3, #hero-5 h3`
+    `#hero-2 h2, #hero-3 h2, #hero-4 h2, #hero-5 h2, #hero-6 h2, #hero-7 h2, #hero-8 h2, #hero-9 h2, #hero-10 h2, 
+     #hero-2 h1, #hero-3 h1, #hero-4 h1, #hero-5 h1, #hero-6 h1, #hero-7 h1, #hero-8 h1, #hero-9 h1, #hero-10 h1, 
+     #hero-2 h3, #hero-3 h3, #hero-4 h3, #hero-5 h3, #hero-6 h3, #hero-7 h3, #hero-8 h3, #hero-9 h3, #hero-10 h3`
   ],
   {
     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
   }
 );
 
-while (i < 11) {
+while (i < 10) {
   tl.to(`#hero-${i} h2`, 0.9, {
     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
     delay: del
@@ -95,6 +95,5 @@ while (i < 11) {
       },
       "-=0.3"
     );
-
   i++;
 }
